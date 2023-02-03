@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="/css/style.css">
+  <title>
+    <%= title %>
+  </title>
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <nav class="container">
+        <div class="nav-list">
+          <a href="/auth">
+            <% if (!login) { %>
+              <%= text%>
+                <% } %>
+          </a>
+        </div>
+        <div>صندوق سرمایه
+          گزاری آرمان اقتصاد </div>
+      </nav>
+    </nav>
+  </header>
+  <section>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>ردیف</th>
+            <th>نماد بورسی شرکت</th>
+            <th>ارزش سهام عرض شده(ریال)</th>
+            <th>میزان سوددهی پیش بینی شده برای یک ماه (ریال)</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% for( let index=0; index < companies.length; index++ ) { %>
+            <tr>
+              <th>
+                <%= index %>
+              </th>
+              <td>
+                <%= companies[index].symbol %>
+              </td>
+              <td>
+                <%= companies[index].value %>
+              </td>
+              <td>
+                <%= companies[index].profit %>
+              </td>
+            </tr>
+            <% } %>
+        </tbody>
+      </table>
+      <br><br><br>
+      <select size="1">
+        <option value="">Select an option</option>
+        <option value="1">Greedy</option>
+        <option value="2">Dynamic programming</option>
+        <option value="3">Backtracking</option>
+      </select>
+      <br><br><br><br><br>
+      <textarea name="answer" id="answer" cols="30" rows="10"></textarea>
+    </div>
+  </section>
+  <script src="/javascript/main.js"></script>
+</body>
+
+</html>

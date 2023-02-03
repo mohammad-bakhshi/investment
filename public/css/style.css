@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  direction: rtl;
+  user-select: none;
+}
+
+html {
+  font-family: "Rubik", sans-serif;
+  color: #444;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+nav {
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 32px;
+  /* background-image: linear-gradient(to right, red, blue); */
+
+  /* background-color: green; */
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list a:link,
+.nav-list a:visited {
+  text-decoration: none;
+  color: #dee2e6;
+}
+
+header {
+  height: 100vh;
+  position: relative;
+
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.6),
+      rgba(34, 34, 34, 0.6)
+    ),
+    url("../img/background.jpg");
+  background-size: cover;
+  color: #fff;
+}
+
+table {
+  width: 800px;
+  margin-top: 100px;
+  margin-right: 250px;
+  font-size: 18px;
+  /* border: 1px solid #343a40; */
+  border-collapse: collapse;
+}
+
+th,
+td {
+  /* border: 1px solid #343a40; */
+  padding: 16px 24px;
+  text-align: left;
+  text-align: right;
+  direction: rtl;
+}
+
+thead tr {
+  background-color: #087f5b;
+  color: #fff;
+}
+
+thead th {
+  width: 25%;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e9ecef;
+}
+
+select {
+  margin-right: 400px;
+  text-align: center;
+  width: 400px;
+  max-width: 100%;
+  overflow-y: auto;
+  cursor: pointer;
+  padding: 15px 25px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  color: #444;
+  font-size: 18px;
+  box-shadow: -3px 3px 5px 0px rgba(0, 0, 0, 0.1);
+}
+select option {
+  padding: 10px 20px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  background-color: rgb(238, 238, 238);
+  white-space: pre-wrap;
+  cursor: pointer;
+}
+select option:hover {
+  background-color: rgb(223, 223, 223);
+}
+select option:checked {
+  box-shadow: 0 0 10px 100px #595959 inset;
+}
+select::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  border-radius: 12px;
+}
+
+select::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f5f5f5;
+}
+
+select::-webkit-scrollbar-thumb {
+  background-color: rgb(225, 225, 225);
+  border-radius: 12px;
+  background-image: -webkit-linear-gradient(
+    90deg,
+    rgba(160, 160, 160, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(160, 160, 160, 0.2) 50%,
+    rgba(160, 160, 160, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+}
+select.fadeIn {
+  animation: fadeInDown 0.2s;
+}
+select.fadeOut {
+  animation: fadeInUp 0.2s;
+}
+
+textarea {
+  text-align: center;
+  margin-right: 500px;
+}

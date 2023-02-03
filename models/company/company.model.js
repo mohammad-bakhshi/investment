@@ -8,18 +8,22 @@ export const createCompany = async (symbol, value, profit) => {
       profit
     }
     const result = await Company.create(company);
-    return result;
+    return {
+      symbol: result.symbol,
+      value: result.value,
+      profit: result.profit
+    }
   } catch (error) {
-    console.log(error)
+    throw new Error(error);
   }
 }
 
 
 export const getAllCompanies = async () => {
   try {
-    const companies = await Company.find({});
+    const companies = await Company.find({}, { id: 1, symbol: 1, profit: 1, value: 1 }).lean();
     return companies;
   } catch (error) {
-
+    throw new Error(error);
   }
 }

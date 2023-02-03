@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('partials/head.ejs') %>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/auth.css">
+    <title>
+      <%= title %>
+    </title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="card">
+          <h2 class="card-title text-center">ثبت نام / ورود</h2>
+          <div class="card-body py-md-4">
+            <form _lpchecked="1">
+              <div class="form-group">
+                <input type="text" class="form-control" id="username" placeholder="نام کاربری">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="رمز عبور">
+              </div>
+              <div class="d-flex flex-row align-items-center gap-2">
+                <button class="btn btn-primary bg-success border-success" id="signin">ورود</button>
+                <button class="btn btn-primary" id="signup">ثبت نام</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="/javascript/auth.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/profile.css">
+    <title>
+      <%= title %>
+    </title>
+</head>
+
+<body>
+  gray<div class="profile-card">
+    <div class="profile-card-header">
+      <div class="profile-image"></div>
+
+      <div class="profile-info">
+        <h3 class="profile-name">
+          <%= user.username %>
+        </h3>
+      </div>
+    </div>
+
+    <div class="profile-card-body">
+      <ul class="status">
+
+        <li>
+          <span class="status-text">سرمایه گذاری</span>
+          <span class="status-value">
+            <%= user.investment %>
+          </span>
+        </li>
+
+      </ul>
+
+      <div class="action">
+        <input type="number" name="invest" id="invest" placeholder="مبلغ سرمایه گذاری">
+        <button class="btn btn-pink" id="investment" type="submit">افزودن مبلغ</button>
+      </div>
+    </div>
+  </div>
+  <script src="/javascript/profile.js"></script>
+</body>
+
+</html>
