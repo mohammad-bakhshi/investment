@@ -11,10 +11,11 @@ select.addEventListener('change', async () => {
     });
     const result = await response.json();
     let answer = '';
-    for (let index = 0; index < result.length; index++) {
-      const element = result[index];
+    for (let index = 0; index < result.companies.length; index++) {
+      const element = result.companies[index];
       answer += `${element.symbol}\r\n`
     }
+    answer += `profit: ${result.profit}`
     const textarea = document.querySelector('textarea');
     textarea.value = answer
   }
@@ -27,10 +28,11 @@ select.addEventListener('change', async () => {
     });
     const result = await response.json();
     let answer = '';
-    for (let index = 0; index < result.length; index++) {
-      const element = result[index];
+    for (let index = 0; index < result.companies.length; index++) {
+      const element = result.companies[index];
       answer += `${element.symbol}\r\n`
     }
+    answer += `profit: ${result.profit}`
     const textarea = document.querySelector('textarea');
     textarea.value = answer
   }
